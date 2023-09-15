@@ -3,6 +3,7 @@ import tomato from '../images/tomato.svg'
 import  imdb from '../images/imdb.svg'
 import play from '../images/Play.svg'
 import useFetchMovie from "./useFetchMovie";
+import GetRandomMovie from "./GetRandomMovie";
 
 const TextSection = styled.section`
 color: #fff;
@@ -34,9 +35,6 @@ h1 {
 
 
 const HomeText = () => {
-    const { movies } = useFetchMovie('https://api.themoviedb.org/3/movie/popular?api_key=25d4d81ea227fa63fc9ceffaf3dc362c');
-    console.log(movies);
-
     return ( 
         <TextSection className="hometext">
             {/* <h1>{ movies }</h1> */}
@@ -62,3 +60,22 @@ const HomeText = () => {
 }
  
 export default HomeText;
+
+
+const [scrolled, setScrolled] = useState(false);
+
+const handleScroll = () => {
+  const offset = window.scrollY;
+  if (offset > 200) {
+    setScrolled(true);
+  }
+  else {
+    setScrolled(false)
+  }
+}
+
+let homeNav = ['navhome'];
+
+// if (scrolled) {
+//   homeNav.push('scrolled');
+// }

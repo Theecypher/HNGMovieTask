@@ -8,17 +8,12 @@ const FetchMovies = () => {
 
     const { movies } = useFetchMovie(url);
 
+    const movie_s = movies.slice(10);
+
     return ( 
         <div className="fetchmovies"
-         style={{
-            padding: "20px 20px 20px 10px",
-            display: "grid",
-            justifyContent: "center",
-            gridTemplateColumns: "1fr 1fr 1fr",
-            gridGap: "15px",
-        }} 
         >
-            {movies && movies.map((movie) => {
+            {movie_s && movie_s.map((movie) => {
 
                return <Movie key={movie.id} movie={movie} />
             })}

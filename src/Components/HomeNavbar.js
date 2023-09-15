@@ -6,10 +6,17 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 // import { Styled } from 'styled-components/dist/constructors/constructWithOptions';
 import { styled } from 'styled-components';
 import search from '../images/Search.svg'
+import { useEffect, useState } from 'react';
 
 const Navbar = styled.nav`
   display: flex;
   justify-content: space-between;
+  // background: #eee;
+  // width: 100%;
+  // minheight: 6v;
+  boxSizing: border-box;
+  alignItems: center;
+  position: sticky;
   .logo_text  {
     color: #fff;
     padding: 10px;
@@ -29,8 +36,10 @@ const Navbar = styled.nav`
 `
 
 const HomeNavbar = () => {
+
+
     return ( 
-        <Navbar className="home-nav">
+        <Navbar className="homenav">
             <h3 className='logo'>
                 <img src="" alt="" />
                 <Link className='logo_text'>MovieBox</Link>

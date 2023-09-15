@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react"
 
-// const { movie_id } =
-
 const useFetchMovie = (url) => {
     const [movies, setMovies] = useState([]);
     // const [isPending, seetIsPending] = useState(false);

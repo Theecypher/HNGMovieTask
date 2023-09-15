@@ -19,11 +19,11 @@ backgroundColor: red;
 }
 .imdb-card {
     display: flex;
-    gap: 10px;
-    marginTop: -2rem;
+    color: black;
+    marginleft: -5rem;
 }
-.row {
-    display: flex;
+.release {
+    color: black;
 }
 `
 
@@ -31,7 +31,9 @@ const Movie = ({ movie}) => {
     const [toggleFavorite, setToggleFavorite] = useState(false);
 
     return ( 
-        <MovieCard id='movies' className='movies'>
+        <MovieCard id='movies' className='movies' style={{
+            width: "250px"
+        }}>
                 <span onClick={() => setToggleFavorite((prev) => !prev)}>
                     {toggleFavorite ? (
                         <AiFillHeart className='favorite' style={{display: "block",
@@ -48,8 +50,9 @@ const Movie = ({ movie}) => {
         <Link to={`/Movies/${movie.id}`}>
             <div className="movie-card">
                 <img data-testid="movie-poster" 
+                className='movie-poster'
                  src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} 
-                 height={300}
+                 height={350}
                  width={200}
                   alt={movie.title} 
                   />
