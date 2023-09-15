@@ -3,10 +3,10 @@
 }
 .btn1 {
     margin-top: 5px;
-    /* padding: 5px 2rem; */
 } 
  
 p {
+    color: #fff;
     font-weight: 400;
 }
 .card__poster {

@@ -7,6 +7,8 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { styled } from 'styled-components';
 import search from '../images/Search.svg'
 import { useEffect, useState } from 'react';
+import { FaGripLines } from 'react-icons/fa';
+import box from "../images/logo.png"
 
 const Navbar = styled.nav`
   display: flex;
@@ -31,7 +33,19 @@ const Navbar = styled.nav`
     padding: 5px 5px 5px 15px;
   }
   .signup {
+    margin: auto;
+    font-size: .8rem;
     color: #fff; 
+  }
+  .logo img {
+    width: 20px;
+  }
+  .hammenu {
+    color: white;
+    font-size: 6px;
+    width: 20px;
+    height: 15px;
+    border-radius: 10px;
   }
 `
 
@@ -41,7 +55,7 @@ const HomeNavbar = () => {
     return ( 
         <Navbar className="homenav">
             <h3 className='logo'>
-                <img src="" alt="" />
+                <img src={box} alt="" />
                 <Link className='logo_text'>MovieBox</Link>
             </h3>
 
@@ -52,7 +66,7 @@ const HomeNavbar = () => {
                 <Link className='signup'>Sign up</Link>
             {/* </h5> */}
 
-                <GiHamburgerMenu style={{backgroundColor: "red"}} className='hammenu' />
+              <FaGripLines style={{backgroundColor: "red"}}  className='hammenu'/>
             </div>
         </Navbar>
      );

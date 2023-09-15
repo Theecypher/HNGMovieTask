@@ -9,10 +9,7 @@ const sideBarStyles = styled.div`
 const SidebarBox = () => {
     return ( 
         <sideBarStyles style={{
-            padding: "10px 10px",
-            border: "1px solid red",
-            // backgroundColor: "rgb(242, 194, 194)",
-            width: "100%",
+            padding: "10px 10px 20px",
             lineHeight: "21px",
             borderRadius: "10px"
         }}

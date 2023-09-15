@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { FiLogOut, FiVideo } from "react-icons/fi";
 import { MdOutlinePerson } from 'react-icons/md'
 
-const SidebarStyle = styled.nav`
+const SideBarStyle = styled.nav`
 position: fixed;
 left: 0;
 top: 0;
@@ -16,38 +16,29 @@ width: 165px;
 height: 100vh;
 border-radius: 0 10px 15px 0;
 
-ul {
-    padding: 8px 5px;
-}
 
-li {
-    font-size: 14px;
-    padding: 14px 10px
-}
-a {
-    padding: 5px;
-    color: black;
-}
-.logo {
-    display: flex;
-    justify-content: space-between;
-}
-.logout {
-    margin: 25px 10px;
-}
 @media only screen and (max-width: 768px) {
     display: none;
 }
+a {
+    color: black;
+}
+ .logout {
+     margin: 25px 10px;
+}
 `
+
+
 
 const Sidebar = () => {
     return ( 
-        <SidebarStyle className="NavbarItems">
+        <SideBarStyle className="NavbarItems">
             <h1 className="logo">
                 <FaBars style={{backgroundColor: "red",
                 fontSize: "25px",
                 borderRadius: '5px',
                 color: "white",
+                marginTop: "10px"
             }} className='logomenu' />
                 MovieBox
             </h1>
@@ -79,7 +70,7 @@ const Sidebar = () => {
                 Log out
              </Link>
             </p>
-        </SidebarStyle>
+        </SideBarStyle>
      );
 }
  

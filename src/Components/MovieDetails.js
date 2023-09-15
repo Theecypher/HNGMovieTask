@@ -8,12 +8,16 @@ import { AiOutlineBars } from "react-icons/ai";
 import { FiSmartphone } from 'react-icons/fi'
 import styled from "styled-components";
 import '../styles/movieDetailStyles.css'
+import Footer from "./Footer";
 
 
 const MovieDetailSection = styled.section`
 
 .rating {
   display: flex;
+}
+p {
+  color: #000;
 }
 h3 {
   fontSize: 3rem;
@@ -29,6 +33,8 @@ const MovieDetails = () => {
     const [data, setData] = useState([]);
     const [loader, setLoaders] = useState(false);
     const {id} = useParams();
+    const [date, setDate] = useState([]);
+    // const [error, setError] = 
 
 
     const options = {
@@ -44,29 +50,33 @@ const MovieDetails = () => {
           .then(response => response.json())
           .then(response => {
             setData(response);
-            console.log(response);
+            setDate(response.release_date)
           })
           .catch(err => console.error(err));
-    })
+    }, [])
+
+    const d = new Date(date);
+    const day = d.getTime();
 
     
     return ( 
         <div>
             <Sidebar />
             <MovieDetailSection style={{position: "absolute",
-            left: "20%"
-        }}>
+            left: "20%",
+            top: "0",
+          }}>
                 <img className="img" src={`https://image.tmdb.org/t/p/w500/${data.backdrop_path}`}
                 width={800}
-                 alt="" />
+                alt="" />
                 <div  className="movieDetailCard" style={{
                   display: "flex",
                   justifyContent: "space-between",
-                  width: "750px"
+                  width: "750px",
                 }}>
                   <div className="movie__name">
                   <h3 className="movie__title" data-testid="movie-title">{ data.title } . </h3>
-                  <p className="movie__year" data-testid="movie-release-date"> { data.release_date } . </p>
+                  <p className="movie__year" data-testid="movie-release-date"> { day } . </p>
                   <p className="movie__duration" data-testid="movie-runtime"></p>
                   <div className="genre"></div>
                   </div>
@@ -92,9 +102,13 @@ const MovieDetails = () => {
                     }}>Director: Mma Obiora</p>
                   </div>
                   <div className="img__section">
-                    <button className="btn btn1">
+                    <button className="btn btn_1">
                       <FiSmartphone />
                       See Showtimes
+                    </button>
+                    <button className="btn btn1">
+                      <AiOutlineBars />
+                      More watch options
                     </button>
                     <div className="card__poster">
                       <img src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`}
@@ -102,12 +116,10 @@ const MovieDetails = () => {
                        width={200}
                        alt="" />
                     </div>
-                    <button className="btn btn1">
-                      <AiOutlineBars />
-                      More watch options
-                    </button>
                   </div>
                 </div>
+
+                {/* <Footer /> */}
             </MovieDetailSection>
         </div>
      );

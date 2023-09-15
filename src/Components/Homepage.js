@@ -1,6 +1,7 @@
 import FetchMovies from "./FetchMovies";
 import styled from "styled-components"; 
 import HomeMain from "./HomeMain";
+import Footer from "./Footer";
 
 
 
@@ -29,6 +30,7 @@ const HomePage = () => {
                 </div>
             <FetchMovies />
             </div>
+            <Footer />
         </HomePageStyle>
      );
 }

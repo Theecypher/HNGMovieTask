@@ -19,8 +19,10 @@ backgroundColor: red;
 }
 .imdb-card {
     display: flex;
-    color: black;
     marginleft: -5rem;
+}
+.row p{
+    color: #000;
 }
 .release {
     color: black;

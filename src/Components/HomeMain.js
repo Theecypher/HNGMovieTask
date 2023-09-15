@@ -39,7 +39,7 @@ const HomeMain = () => {
     const random = Math.floor(Math.random() * movies.length);
     const randomMovie = movies[random];
 
-    console.log(randomMovie);
+    // console.log(randomMovie);
 
     return ( 
         <TextSection
