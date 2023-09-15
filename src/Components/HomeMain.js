@@ -1,5 +1,5 @@
 import HomeNavbar from "./HomeNavbar";
-import HomeText from "./HomeText";
+
 import useFetchMovie from "./useFetchMovie";
 import tomato from '../images/tomato.svg'
 import  imdb from '../images/imdb.svg'

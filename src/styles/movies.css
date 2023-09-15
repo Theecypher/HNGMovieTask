@@ -2,48 +2,16 @@
 
 .fetchmovies {
     display: grid;
-    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;    
-}
-@media only screen and (min-width: 992px) { 
-    .fetchmovies {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-@media only screen and (min-width: 1200px) { 
-    .fetchmovies {
-        grid-template-columns: repeat(4, 1fr);
-    }
 }
 @media only screen and (min-width: 768px) { 
     .fetchmovies {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-@media only screen and (min-width: 600px) { 
-    .fetchmovies {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media only screen and (max-width: 455px) { 
+@media only screen and (max-width: 480px) { 
     .fetchmovies {
         grid-template-columns: repeat(1, 1fr);
-        padding: auto;
-    }
-    .movie-card {
-        width: 400px;
     }
 }
-/* style={{
-    padding: "20px 20px 20px 10px",
-    display: "grid",
-    justifyContent: "center",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gridGap: "15px", */
-/* 
-@media only screen and (max-width: 600px) { 
-    .fetchmovies {
-        grid-template-columns: repeat(3, 1fr);
-    }
-} */
