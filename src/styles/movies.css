@@ -2,16 +2,33 @@
 
 .fetchmovies {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;    
+   padding-left: 20px;
 }
-@media only screen and (min-width: 768px) { 
+@media (min-width: 576px) { 
     .fetchmovies {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@media only screen and (max-width: 480px) { 
+@media (max-width: 460px) { 
     .fetchmovies {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
+@media screen and (min-width: 768px) { 
+    .fetchmovies {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 992px) { 
+    .fetchmovies {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (min-width: 1200px) { 
+    .fetchmovies {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+

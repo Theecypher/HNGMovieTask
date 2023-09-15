@@ -65,9 +65,9 @@ const MovieDetails = () => {
                   width: "750px"
                 }}>
                   <div className="movie__name">
-                  <h3 className="movie__title">{ data.title } . </h3>
-                  <p className="movie__year"> { data.release_date } . </p>
-                  <p className="movie__duration"></p>
+                  <h3 className="movie__title" data-testid="movie-title">{ data.title } . </h3>
+                  <p className="movie__year" data-testid="movie-release-date"> { data.release_date } . </p>
+                  <p className="movie__duration" data-testid="movie-runtime"></p>
                   <div className="genre"></div>
                   </div>
                   <div className="rating">
@@ -79,7 +79,7 @@ const MovieDetails = () => {
                     <p>{data.runtime}k</p>
                   </div>
                 </div>
-                <div className="movie__overview">
+                <div data-testid="movie-overview" className="movie__overview">
                   <div>
                     <p style={{
                       fontSize: "1rem",

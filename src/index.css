@@ -35,3 +35,6 @@ button {
     justify-self: end;
     align-self: en;
 }
+.movie-poster {
+    object-fit: cover;
+}

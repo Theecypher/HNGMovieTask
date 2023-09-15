@@ -52,8 +52,7 @@ const HomeMain = () => {
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            minHeight: "90vh",
-            objectFit: "cover"
+            minHeight: "90vh"
         }} >
             <HomeNavbar />
             <div className="homeText">
