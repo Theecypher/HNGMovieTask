@@ -1,0 +1,22 @@
+{
+  "blogs": [
+    {
+      "title": "Down the lane blog",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores expedita nobis porro reiciendis quae sunt magnam aut vero odio? Ipsam voluptate, itaque ab laboriosam quos iste quae ullam inventore possimus",
+      "author": "mma",
+      "id": 2
+    },
+    {
+      "title": "Historically inlove",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores expedita nobis porro reiciendis quae sunt magnam aut vero odio? Ipsam voluptate, itaque ab laboriosam quos iste quae ullam inventore possimus",
+      "author": "mario",
+      "id": 3
+    },
+    {
+      "title": "My first Internship",
+      "body": "How i got internship in Meta, which pays  a five digit salary. The challlenges i encounter, how i solved it",
+      "author": "mma",
+      "id": 4
+    }
+  ]
+}
