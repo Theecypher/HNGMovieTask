@@ -13,10 +13,39 @@ ul li {
     display: inline;
     padding: 10px 18px;
     font-size: 1.1rem;
+    padding: 10px 18px;
+    font-size: 1.1rem;
 }
 ul {
     margin-bottom: 15px;
 }
 p {
     font-size: 1.2rem;
+}
+@media (max-width: 460px) { 
+    ul li {
+        display: block;
+        padding: 10px 10px;
+        font-size: 1.1rem;
+        padding: 10px 18px;
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 300px) { 
+    ul li {
+        display: block;
+        padding: 10px 18px;
+        font-size: 1.1rem;
+        padding: 10px 10px;
+        font-size: 1.1rem;
+    }
+}
+@media (min-width: 250px) { 
+    ul li {
+        display: block;
+        padding: 10px 10px;
+        font-size: 1.1rem;
+        padding: 10px 18px;
+        font-size: 1.1rem;
+    }
 }
